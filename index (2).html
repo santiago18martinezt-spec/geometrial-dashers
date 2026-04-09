@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Dash - Discord Edition</title>
+    <style>
+        /* Este CSS hace que el juego ocupe TODA la pantalla sin bordes feos */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%; 
+            overflow: hidden; 
+            background-color: #000; 
+        }
+        iframe { 
+            width: 100vw; 
+            height: 100vh; 
+            border: none; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- El enlace de OzGames suele ser este o uno similar que termina en index.html -->
+    <iframe 
+        src="https://github.io" 
+        allow="autoplay; keyboard-focus; fullscreen; focus-without-user-activation"
+        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-scripts allow-same-origin"
+        id="game-iframe">
+    </iframe>
+
+    <script>
+        // Este pequeño truco ayuda a que el iframe tome el foco del teclado automáticamente
+        window.onload = function() {
+            const frame = document.getElementById('game-iframe');
+            frame.focus();
+        };
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"408d8dc64f1b4ab5936a656cb9db7d53","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"408d8dc64f1b4ab5936a656cb9db7d53","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
